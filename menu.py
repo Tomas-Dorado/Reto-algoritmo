@@ -13,8 +13,10 @@ def menu():
 
         if opcion == "1":
             print("Ejecutando el Ejercicio 1...")
-            ruta = os.path.join("Caballos", "lanzador.py")
-            subprocess.run(["python", ruta])
+            ruta_1 = os.path.join("Caballos", "lanzador.py")
+            ruta_2 = os.path.join("Caballos", "Simulador.py")
+            subprocess.run(["python", ruta_1])
+            subprocess.run(["python", ruta_2])
         elif opcion == "2":
             print("Ejecutando el Ejercicio 2...")
             ruta = os.path.join("lanzador", "lanzador.py")
