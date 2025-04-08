@@ -1,5 +1,6 @@
 from Nodo import Nodo
 from Reina import Reina
+from Visualizar import visualizar
 
 def resolver_n_reinas(n):
     soluciones = []
@@ -39,3 +40,5 @@ def imprimir_soluciones(n):
 
 n = int(input("Ingrese el número de reinas: "))
 imprimir_soluciones(n)
+soluciones = resolver_n_reinas(n)
+visualizar(n, soluciones)
