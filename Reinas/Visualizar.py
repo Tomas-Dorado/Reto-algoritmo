@@ -1,4 +1,5 @@
 import pygame
+import time
 
 def visualizar(n, soluciones):
     if not soluciones:
@@ -22,6 +23,9 @@ def visualizar(n, soluciones):
     # Seleccionamos la primera solución para visualizar
     solucion = soluciones[0]
 
+    # Tiempo de inicio
+    tiempo_inicio = time.time()
+
     # Bucle principal de pygame
     corriendo = True
     while corriendo:
@@ -43,8 +47,8 @@ def visualizar(n, soluciones):
 
         pygame.display.flip()
 
-    pygame.quit()
+        # Verificamos si han pasado 15 segundos
+        if time.time() - tiempo_inicio > 10:
+            corriendo = False
 
-# Llamamos a la función de visualización
-soluciones = resolver_n_reinas(n)
-visualizar_reinas(n, soluciones)
+    pygame.quit()
