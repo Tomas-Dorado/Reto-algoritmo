@@ -19,7 +19,7 @@ def menu():
             subprocess.run(["python", ruta_2])
         elif opcion == "2":
             print("Ejecutando el Ejercicio 2...")
-            ruta = os.path.join("lanzador", "lanzador.py")
+            ruta = os.path.join("Reinas", "lanzador.py")
             subprocess.run(["python", ruta])
         elif opcion == "3":
             print("Saliendo del programa...")

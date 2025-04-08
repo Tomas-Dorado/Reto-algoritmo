@@ -1,9 +1,6 @@
 from Nodo import Nodo
 from Reina import Reina
 
-
-
-
 def resolver_n_reinas(n):
     soluciones = []
     pila = [Nodo([], 0)]  # Usamos una pila para realizar backtracking
@@ -40,6 +37,5 @@ def imprimir_soluciones(n):
         print("No hay soluciones.")
 
 
-if __name__ == "__main__":
-    n = int(input("Ingrese el número de reinas: "))
-    imprimir_soluciones(n)
+n = int(input("Ingrese el número de reinas: "))
+imprimir_soluciones(n)
